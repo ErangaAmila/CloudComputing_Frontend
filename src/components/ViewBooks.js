@@ -12,7 +12,7 @@ class DataTable extends Component {
 
   getBooks() {
     axios
-      .get("http://localhost:5000/api/books/")
+      .get("http://ccloadblancer-1325520498.us-east-1.elb.amazonaws.com/api/books/")
       .then((res) => this.setState({ books: res.data }))
       .catch((err) => console.log("Error :" + err));
   }
@@ -23,7 +23,7 @@ class DataTable extends Component {
 
   deleteBook = (id) => {
     axios
-      .delete("http://localhost:5000/api/books/" + id)
+      .delete("http://ccloadblancer-1325520498.us-east-1.elb.amazonaws.com/api/books/" + id)
       .then(() => {
         alert("Deleted");
         this.getBooks();

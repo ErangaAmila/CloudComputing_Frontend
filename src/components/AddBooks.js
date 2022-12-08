@@ -32,7 +32,7 @@ class AddForm extends React.Component {
       price: this.state.price,
     }
 
-    Axios.post("http://localhost:5000/api/books/",body).then(() => {
+    Axios.post("http://ccloadblancer-1325520498.us-east-1.elb.amazonaws.com/api/books/",body).then(() => {
         alert("Created");
       })
       .catch((err) => console.error("Error :" + err));
